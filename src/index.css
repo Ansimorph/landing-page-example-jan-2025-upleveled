@@ -1,13 +1,87 @@
+@layer reset {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    ul, ol, li {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@font-face {
+    font-family: "Uncut";
+    src: url("./fonts/UncutSans-Regular.woff2");
+    font-display: swap;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Uncut";
+    src: url("./fonts/UncutSans-Bold.woff2");
+    font-display: swap;
+    font-weight: bold;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  margin: 0 2rem;
+  font-family: "Uncut", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./images/home-shapes-mobile.svg");
+  background-size: 130%;
+
+    @media (min-width: 400px) {
+        background-image: url("./images/home-shapes-tablet.svg");
+    }
+
+    @media (min-width: 600px) {
+        background-image: url("./images/home-shapes-full.svg");
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1, h2, h3 {
+    line-height: 0.9;
+    text-wrap: balance;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+
+    @media (min-width: 600px) {
+        font-size: 4rem;
+        max-width: 10ch;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    max-width: 10ch;
+    margin-bottom: 0;
+
+    @media (min-width: 600px) {
+        font-size: 3rem;
+        max-width: initial;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: center;
+    color: rgb(109 109 109);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

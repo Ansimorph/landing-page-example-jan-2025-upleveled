@@ -1,0 +1,39 @@
+.list {
+    display: grid;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "login logo signup";
+    padding-block: 1.5rem;
+
+    @media(min-width: 600px) {
+        grid-template-columns:  repeat(2, 6rem) 1fr repeat(2, 6rem);
+        grid-template-areas: "_ _ logo login signup";
+    }
+}
+
+.login {
+    grid-area: login;
+    justify-self: start;
+
+    @media(min-width: 600px) {
+        justify-self: end;
+    }
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: center;
+
+    &:not(:hover) {
+        filter: brightness(0);
+    }
+
+    img {
+        width: 4rem;
+    }
+}
+
+.signup {
+    grid-area: signup;
+    justify-self: end;
+}

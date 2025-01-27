@@ -1,23 +1,38 @@
 import "./App.css";
-import logo from "./logo.svg";
+import ExplainerList from "./ExplainerList";
+import Header from "./Header";
+import LinkButton from "./LinkButton";
+import demoImage from "./images/jive-phones.png";
 
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Header />
+      <main>
+        <h1>Don’t make connecting awkward</h1>
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          No more fumbling for business cards or searching for lost contacts
+          after an event. Jive makes it easy to exchange info and keep the
+          conversation going straight from your inbox.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <LinkButton size="l" href="/signup">
+          Sign up for free
+        </LinkButton>
+
+        <img
+          src={demoImage}
+          className="demoImage"
+          alt="Two phones showing a QR code and a new message being sent to a jive contact"
+        />
+
+        <h2>Here's how it works</h2>
+
+        <p>More jiving, less shucking.</p>
+
+        <ExplainerList />
+      </main>
     </div>
   );
 }

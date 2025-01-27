@@ -1,0 +1,48 @@
+.root {
+    color: #000;
+    text-decoration: none;
+    border-radius: calc(var(--height) / 2);
+    min-height: var(--height);
+    display: flex;
+    place-content: center;
+    place-items: center;
+
+    &:active {
+        filter: contrast(0.8);
+    }
+}
+
+.primary {
+    color: #fff;
+    background-color: #000;
+
+    &:hover {
+        background-color: #0590cb;
+    }
+}
+
+.secondary {
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: rgb(229, 231, 235);
+    background-color: #fff;
+
+    &:hover {
+        background-color: #f9c558;
+    }
+}
+
+.medium {
+    --height: 2.2rem;
+
+    font-size: 0.9rem;
+    padding-inline: 1rem;
+}
+
+.large {
+    --height: 3.8rem;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-inline: 2rem;
+}
